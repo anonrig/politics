@@ -6,8 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anonrig/politics.git"
+  },
+  "author": "Yagiz Nizipli",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.10",
     "url-pattern": "^1.0.3"
