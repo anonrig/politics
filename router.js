@@ -12,10 +12,13 @@ class Router {
     this.urls.push({url: new UrlPattern(url), cb, method})
   }
 
+  head(url, cb) {this.setUrl(url, cb, 'HEAD')}
   get(url, cb) {this.setUrl(url, cb, 'GET')}
   post(url, cb) {this.setUrl(url, cb, 'POST')}
   put(url, cb) {this.setUrl(url, cb, 'PUT')}
+  patch(url, cb) {this.setUrl(url, cb, 'PATCH')}
   delete(url, cb) {this.setUrl(url, cb, 'DELETE')}
+  options(url, cb) {this.setUrl(url, cb, 'OPTIONS')}
 
   async matchAll(req, res) {
     const route = _.find(this.urls, ({url, method}) => !!url.match(req.getPath()) && method === req.getMethod())
